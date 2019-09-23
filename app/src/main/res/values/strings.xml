@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">AutotestingWorkshop</string>
+
+    <string name="incorrect_login_error">Недопустимый логин</string>
+    <string name="incorrect_password_error">Недопустимый пароль</string>
+
+</resources>
