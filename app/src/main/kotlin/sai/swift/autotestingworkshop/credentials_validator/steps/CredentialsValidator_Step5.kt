@@ -1,5 +1,6 @@
 package sai.swift.autotestingworkshop.credentials_validator.steps
 
+// Заменим реализацию регулярным выражением
 class CredentialsValidator_Step5 {
 
     companion object {

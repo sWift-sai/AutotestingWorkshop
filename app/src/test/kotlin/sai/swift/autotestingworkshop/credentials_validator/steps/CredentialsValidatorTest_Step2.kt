@@ -4,13 +4,11 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import sai.swift.autotestingworkshop.credentials_validator.CredentialsValidator
 
+// Создаем тестовый класс и пишем первый тест на положительный кейс
 class CredentialsValidatorTest_Step2 {
 
-    private val validator =
-        CredentialsValidator()
+    private val validator = CredentialsValidator()
 
-
-    // region isLoginCorrect
 
     @Test
     fun `when isLoginCorrect - while login length is 3 - should return true`() {
@@ -20,7 +18,5 @@ class CredentialsValidatorTest_Step2 {
         // then
         assertThat(result).isTrue()
     }
-
-    // endregion
 
 }

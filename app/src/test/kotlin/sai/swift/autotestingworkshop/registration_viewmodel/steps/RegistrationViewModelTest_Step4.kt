@@ -39,7 +39,7 @@ class RegistrationViewModelTest_Step4 {
 
     @After
     fun shutdown() {
-        TestLiveDataExecutionController.enableTestMode()
+        TestLiveDataExecutionController.disableTestMode()
     }
     // endregion
 

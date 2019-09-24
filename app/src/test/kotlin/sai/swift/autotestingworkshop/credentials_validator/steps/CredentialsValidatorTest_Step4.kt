@@ -4,13 +4,11 @@ import org.assertj.core.api.Assertions.assertThat
 import org.junit.Test
 import sai.swift.autotestingworkshop.credentials_validator.CredentialsValidator
 
+// Добавим забытый тест на проверку допустимого языка логина
 class CredentialsValidatorTest_Step4 {
 
-    private val validator =
-        CredentialsValidator()
+    private val validator = CredentialsValidator()
 
-
-    // region isLoginCorrect
 
     @Test
     fun `when isLoginCorrect - while login length is 3 - should return true`() {
@@ -74,7 +72,5 @@ class CredentialsValidatorTest_Step4 {
         // then
         assertThat(result).isFalse()
     }
-
-    // endregion
 
 }

@@ -6,9 +6,12 @@ import org.junit.runner.RunWith
 import org.junit.runners.Parameterized
 import sai.swift.autotestingworkshop.credentials_validator.CredentialsValidator
 
-
+// Переделаем существующие тесты в параметрический тест
 @RunWith(Parameterized::class)
-class CredentialsValidatorTest_Step6(private val login: String, private val expectedResult: Boolean) {
+class CredentialsValidatorTest_Step6(
+    private val login: String,
+    private val expectedResult: Boolean
+) {
 
     companion object {
         @JvmStatic
