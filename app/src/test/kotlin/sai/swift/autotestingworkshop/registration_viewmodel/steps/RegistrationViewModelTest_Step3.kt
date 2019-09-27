@@ -1,13 +1,12 @@
 package sai.swift.autotestingworkshop.registration_viewmodel.steps
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nhaarman.mockitokotlin2.mock
 import org.assertj.core.api.Assertions.assertThat
 import org.assertj.core.api.Assertions.fail
-import org.junit.After
-import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import sai.swift.autotestingworkshop.credentials_validator.CredentialsValidator
-import sai.swift.autotestingworkshop.internal.TestLiveDataExecutionController
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewModel
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewState.Content
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewState.Content.EnterButtonState.Enabled
@@ -25,15 +24,8 @@ class RegistrationViewModelTest_Step3 {
         const val INCORRECT_PASSWORD = "42"
     }
 
-    @Before
-    fun setUp() {
-        TestLiveDataExecutionController.enableTestMode()
-    }
-
-    @After
-    fun shutdown() {
-        TestLiveDataExecutionController.disableTestMode()
-    }
+    @get:Rule
+    val rule = InstantTaskExecutorRule()
     // endregion
 
 

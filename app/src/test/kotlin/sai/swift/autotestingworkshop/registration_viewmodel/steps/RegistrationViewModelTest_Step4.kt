@@ -1,15 +1,14 @@
 package sai.swift.autotestingworkshop.registration_viewmodel.steps
 
 import android.content.Context
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import com.nhaarman.mockitokotlin2.doReturn
 import com.nhaarman.mockitokotlin2.mock
 import org.assertj.core.api.Assertions.assertThat
-import org.junit.After
-import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
 import sai.swift.autotestingworkshop.R
 import sai.swift.autotestingworkshop.credentials_validator.CredentialsValidator
-import sai.swift.autotestingworkshop.internal.TestLiveDataExecutionController
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewModel
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewState.Content
 import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewState.Content.EnterButtonState.Disabled
@@ -20,7 +19,7 @@ import sai.swift.autotestingworkshop.registration_viewmodel.RegistrationViewStat
 // Реализуем остальные тесты (с мокированием функций)
 class RegistrationViewModelTest_Step4 {
 
-    // region Fields and functions
+    // region Fields
     companion object {
         const val CORRECT_LOGIN = "Android"
         const val INCORRECT_LOGIN = "RN"
@@ -32,15 +31,8 @@ class RegistrationViewModelTest_Step4 {
         const val PASSWORD_ERROR_MESSAGE = "bad name"
     }
 
-    @Before
-    fun setUp() {
-        TestLiveDataExecutionController.enableTestMode()
-    }
-
-    @After
-    fun shutdown() {
-        TestLiveDataExecutionController.disableTestMode()
-    }
+    @get:Rule
+    val rule = InstantTaskExecutorRule()
     // endregion
 
 
